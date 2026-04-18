@@ -81,8 +81,3 @@ http://localhost:3000
 Authorization: Bearer YOUR_ACCESS_TOKEN
 ```
 
-## Notes
-
-- تأكد أن MongoDB شغال قبل تشغيل المشروع.
-- أول تشغيل قد يستغرق ثوانٍ حتى يتم إنشاء ملفات `dist`.
-- لو عدلت على متغيرات البيئة، أعد تشغيل السيرفر.
