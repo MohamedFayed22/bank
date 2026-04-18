@@ -1,0 +1,1467 @@
+{
+	"info": {
+		"_postman_id": "3e7be77e-f34f-42bd-879f-7925b3c56dae",
+		"name": "bank accounting",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2367461",
+		"_collection_link": "https://winter-satellite-925277.postman.co/workspace/63fecf33-fb22-4232-a9ee-836a99d8a581/collection/2367461-3e7be77e-f34f-42bd-879f-7925b3c56dae?action=share&source=collection_link&creator=2367461"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fullName\" : \"ahmed ali\",\n    \"email\":\"ahmed@gmail.com\",\n    \"password\": \"123544\",\n    \"cpassword\" : \"123544\",\n    \"age\": 20,\n    \"currency\": \"usd\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/auth/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "register sample",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"fullName\" : \"ahmed ali\",\n    \"email\":\"ahmed@gmail.com\",\n    \"password\": \"123544\",\n    \"cpassword\" : \"123544\",\n    \"age\": 20,\n    \"currency\": \"usd\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:3000/auth/register",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "375"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"177-7yqL0+8fY3ArYVU1kiwkxSfeRL4\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 18 Apr 2026 08:12:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Sign up successful\",\n    \"user\": {\n        \"firstName\": \"ahmed\",\n        \"lastName\": \"ali\",\n        \"email\": \"ahmed@gmail.com\",\n        \"password\": \"$2b$10$EJzr1XkTUr2dxiYdVHwxSO3vhUT8elo3M1h8QoCKZBpVnFcPfPtOG\",\n        \"age\": 20,\n        \"role\": \"user\",\n        \"_id\": \"69e33d0558cb1853175d3216\",\n        \"createdAt\": \"2026-04-18T08:12:53.678Z\",\n        \"updatedAt\": \"2026-04-18T08:12:53.678Z\",\n        \"__v\": 0,\n        \"fullName\": \"ahmed ali\",\n        \"id\": \"69e33d0558cb1853175d3216\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"ahmed@gmail.com\",\n    \"password\": \"123544\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/auth/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login sample",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"ahmed@gmail.com\",\n    \"password\": \"123544\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:3000/auth/login",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "667"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"29b-j42Tn6bbRUcf+v25AlHdKYSIvHQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 18 Apr 2026 08:17:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Sign In successful\",\n    \"data\": {\n        \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZTMzZDA1NThjYjE4NTMxNzVkMzIxNiIsImVtYWlsIjoiYWhtZWRAZ21haWwuY29tIiwiaWF0IjoxNzc2NTAwMjI5LCJleHAiOjE3NzY1MDA1MjksImp0aSI6IjNmMjMwNjMyLWM0MWEtNDhkYi1hMzI4LTgxNzg0NDVjMTdkNiJ9.impIDJmvMvH2__i6Hk2U_vBaWPdY4zAmy_M6Bvp-dDU\",\n        \"user\": {\n            \"_id\": \"69e33d0558cb1853175d3216\",\n            \"firstName\": \"ahmed\",\n            \"lastName\": \"ali\",\n            \"email\": \"ahmed@gmail.com\",\n            \"password\": \"$2b$10$EJzr1XkTUr2dxiYdVHwxSO3vhUT8elo3M1h8QoCKZBpVnFcPfPtOG\",\n            \"age\": 20,\n            \"role\": \"user\",\n            \"createdAt\": \"2026-04-18T08:12:53.678Z\",\n            \"updatedAt\": \"2026-04-18T08:12:53.678Z\",\n            \"__v\": 0,\n            \"fullName\": \"ahmed ali\",\n            \"id\": \"69e33d0558cb1853175d3216\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZTMzZDA1NThjYjE4NTMxNzVkMzIxNiIsImVtYWlsIjoiYWhtZWRAZ21haWwuY29tIiwiaWF0IjoxNzc2NTAwMjI5LCJleHAiOjE3NzY1MDA1MjksImp0aSI6IjNmMjMwNjMyLWM0MWEtNDhkYi1hMzI4LTgxNzg0NDVjMTdkNiJ9.impIDJmvMvH2__i6Hk2U_vBaWPdY4zAmy_M6Bvp-dDU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/accounts/me",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"accounts",
+								"me"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "profile sample",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:3000/accounts/me",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "3000",
+									"path": [
+										"accounts",
+										"me"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "416"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1a0-Agon9FQYtKOcDkHj43UxZnjMotM\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 18 Apr 2026 08:39:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User profile fetched successfully\",\n    \"data\": {\n        \"data\": {\n            \"_id\": \"69e341a0c4105bf7d10c1f27\",\n            \"firstName\": \"zain\",\n            \"lastName\": \"mohamd\",\n            \"email\": \"zain@gmail.com\",\n            \"password\": \"$2b$10$4pxwWEl3oXQM2pI/PuaMa.v8BqVzaJovxwD8zM/d7Cn9iifUoPNSa\",\n            \"age\": 20,\n            \"role\": \"user\",\n            \"createdAt\": \"2026-04-18T08:32:32.813Z\",\n            \"updatedAt\": \"2026-04-18T08:32:32.813Z\",\n            \"__v\": 0,\n            \"fullName\": \"zain mohamd\",\n            \"id\": \"69e341a0c4105bf7d10c1f27\"\n        },\n        \"balance\": 600\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "disableAccount",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZTM0MWEwYzQxMDViZjdkMTBjMWYyNyIsImVtYWlsIjoiemFpbkBnbWFpbC5jb20iLCJpYXQiOjE3NzY1MDE5MDgsImV4cCI6MTc3NjU4ODMwOCwianRpIjoiYjQwNWZmYTQtYzlmZC00Y2UyLWI0MGYtNmJhNWIxYjIyZmIxIn0.RQ6wfsz2f-F9gm1iPTdjG1Ax-f8b9JiaDwqaJkY-fss",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"accountNumber\": \"5794183659\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/accounts/inactive-account",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"accounts",
+								"inactive-account"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"accountNumber\": \"5794183659\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:3000/accounts/inactive-account",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "3000",
+									"path": [
+										"accounts",
+										"inactive-account"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "667"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"29b-V4kS1ANWwBKjn2i0mnbpqYM6F1c\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 18 Apr 2026 09:55:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Unauthorized\",\n    \"status\": 401,\n    \"stack\": \"Error: Unauthorized\\n    at disableAccount (/media/mohamed/52af8f1a-f97a-4dde-b07d-1e4c29c04528/learn/bank/dist/modules/users/user.service.js:32:19)\\n    at Layer.handleRequest (/media/mohamed/52af8f1a-f97a-4dde-b07d-1e4c29c04528/learn/bank/node_modules/router/lib/layer.js:152:17)\\n    at next (/media/mohamed/52af8f1a-f97a-4dde-b07d-1e4c29c04528/learn/bank/node_modules/router/lib/route.js:157:13)\\n    at authentication (/media/mohamed/52af8f1a-f97a-4dde-b07d-1e4c29c04528/learn/bank/dist/common/middleware/authentication.js:36:9)\\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "transaction",
+			"item": [
+				{
+					"name": "deposit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZTMzZDA1NThjYjE4NTMxNzVkMzIxNiIsImVtYWlsIjoiYWhtZWRAZ21haWwuY29tIiwiaWF0IjoxNzc2NTAwMjI5LCJleHAiOjE3NzY1MDA1MjksImp0aSI6IjNmMjMwNjMyLWM0MWEtNDhkYi1hMzI4LTgxNzg0NDVjMTdkNiJ9.impIDJmvMvH2__i6Hk2U_vBaWPdY4zAmy_M6Bvp-dDU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"amount\" : 100,\n    \"inSystem\" : \"inSystem\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/transaction/deposit",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"transaction",
+								"deposit"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "deposit sample",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"amount\" : 100,\n    \"inSystem\" : \"inSystem\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:3000/transaction/deposit",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "3000",
+									"path": [
+										"transaction",
+										"deposit"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "290"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"122-8H3skpf5O+TmFGclrRkor0gmbgc\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 18 Apr 2026 08:21:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Deposit created successfully\",\n    \"data\": {\n        \"amount\": 100,\n        \"type\": \"deposit\",\n        \"userId\": \"69e33d0558cb1853175d3216\",\n        \"inSystem\": \"inSystem\",\n        \"_id\": \"69e33f0b290defab3ff1c7fc\",\n        \"createdAt\": \"2026-04-18T08:21:31.780Z\",\n        \"updatedAt\": \"2026-04-18T08:21:31.780Z\",\n        \"__v\": 0,\n        \"id\": \"69e33f0b290defab3ff1c7fc\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "withdraw",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"amount\" : 50\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:3000/transaction/withdraw",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "3000",
+									"path": [
+										"transaction",
+										"withdraw"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "304"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"130-FcaT7VVK5tAzrBgu+1LY2p2nz4Q\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 18 Apr 2026 08:46:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Deposit created successfully\",\n    \"data\": {\n        \"amount\": 50,\n        \"type\": \"withdraw\",\n        \"userId\": \"69e341a0c4105bf7d10c1f27\",\n        \"inSystem\": \"inSystem\",\n        \"_id\": \"69e344de2a7aeb375830534c\",\n        \"createdAt\": \"2026-04-18T08:46:22.928Z\",\n        \"updatedAt\": \"2026-04-18T08:46:22.928Z\",\n        \"__v\": 0,\n        \"id\": \"69e344de2a7aeb375830534c\"\n    },\n    \"balance\": 550\n}"
+						}
+					]
+				},
+				{
+					"name": "transfer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZTM0MWEwYzQxMDViZjdkMTBjMWYyNyIsImVtYWlsIjoiemFpbkBnbWFpbC5jb20iLCJpYXQiOjE3NzY1MDE5MDgsImV4cCI6MTc3NjU4ODMwOCwianRpIjoiYjQwNWZmYTQtYzlmZC00Y2UyLWI0MGYtNmJhNWIxYjIyZmIxIn0.RQ6wfsz2f-F9gm1iPTdjG1Ax-f8b9JiaDwqaJkY-fss",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"amount\": 10,\n    \"inSystem\": \"inSystem\",\n    \"accountNumberTransformer\": \"5794183659\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/transaction/transfer",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"transaction",
+								"transfer"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "transfar example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"amount\": 30,\n    \"inSystem\": \"inSystem\",\n    \"accountNumberTransformer\": \"5794183659\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:3000/transaction/transfer",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "3000",
+									"path": [
+										"transaction",
+										"transfer"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "364"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"16c-6DNc0gTyAcJfi9ieaBDjW+KiOaQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 18 Apr 2026 09:12:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Transfer created successfully\",\n    \"data\": {\n        \"amount\": 30,\n        \"type\": \"transfer\",\n        \"userId\": \"69e341a0c4105bf7d10c1f27\",\n        \"inSystem\": \"inSystem\",\n        \"status\": \"pending\",\n        \"transferTo\": \"69e34adde5c1e0fd401cc7e3\",\n        \"_id\": \"69e34af8e5c1e0fd401cc7e5\",\n        \"createdAt\": \"2026-04-18T09:12:24.306Z\",\n        \"updatedAt\": \"2026-04-18T09:12:24.306Z\",\n        \"__v\": 0,\n        \"id\": \"69e34af8e5c1e0fd401cc7e5\"\n    },\n    \"balance\": 500\n}"
+						}
+					]
+				},
+				{
+					"name": "mySummary",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZTM0MWEwYzQxMDViZjdkMTBjMWYyNyIsImVtYWlsIjoiemFpbkBnbWFpbC5jb20iLCJpYXQiOjE3NzY1MDE5MDgsImV4cCI6MTc3NjU4ODMwOCwianRpIjoiYjQwNWZmYTQtYzlmZC00Y2UyLWI0MGYtNmJhNWIxYjIyZmIxIn0.RQ6wfsz2f-F9gm1iPTdjG1Ax-f8b9JiaDwqaJkY-fss",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/transaction/my/summary",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"transaction",
+								"my",
+								"summary"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:3000/transaction/my/summary",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "3000",
+									"path": [
+										"transaction",
+										"my",
+										"summary"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2204"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"89c-gu3bZwnawXf7PO8eQkYe8xGmYXE\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 18 Apr 2026 09:36:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Transactions fetched successfully\",\n    \"data\": [\n        {\n            \"_id\": \"69e34b4be5c1e0fd401cc7e8\",\n            \"amount\": 10,\n            \"type\": \"transfer\",\n            \"status\": \"completed\",\n            \"transferTo\": {\n                \"_id\": \"69e34adde5c1e0fd401cc7e3\",\n                \"firstName\": \"zain\",\n                \"lastName\": \"mohamd\",\n                \"fullName\": \"zain mohamd\",\n                \"id\": \"69e34adde5c1e0fd401cc7e3\"\n            },\n            \"createdAt\": \"2026-04-18T09:13:47.657Z\",\n            \"id\": \"69e34b4be5c1e0fd401cc7e8\"\n        },\n        {\n            \"_id\": \"69e34b48e5c1e0fd401cc7e7\",\n            \"amount\": 10,\n            \"type\": \"transfer\",\n            \"status\": \"completed\",\n            \"transferTo\": {\n                \"_id\": \"69e34adde5c1e0fd401cc7e3\",\n                \"firstName\": \"zain\",\n                \"lastName\": \"mohamd\",\n                \"fullName\": \"zain mohamd\",\n                \"id\": \"69e34adde5c1e0fd401cc7e3\"\n            },\n            \"createdAt\": \"2026-04-18T09:13:44.651Z\",\n            \"id\": \"69e34b48e5c1e0fd401cc7e7\"\n        },\n        {\n            \"_id\": \"69e34b41e5c1e0fd401cc7e6\",\n            \"amount\": 10,\n            \"type\": \"transfer\",\n            \"status\": \"completed\",\n            \"transferTo\": {\n                \"_id\": \"69e34adde5c1e0fd401cc7e3\",\n                \"firstName\": \"zain\",\n                \"lastName\": \"mohamd\",\n                \"fullName\": \"zain mohamd\",\n                \"id\": \"69e34adde5c1e0fd401cc7e3\"\n            },\n            \"createdAt\": \"2026-04-18T09:13:37.183Z\",\n            \"id\": \"69e34b41e5c1e0fd401cc7e6\"\n        },\n        {\n            \"_id\": \"69e34af8e5c1e0fd401cc7e5\",\n            \"amount\": 30,\n            \"type\": \"transfer\",\n            \"status\": \"completed\",\n            \"transferTo\": {\n                \"_id\": \"69e34adde5c1e0fd401cc7e3\",\n                \"firstName\": \"zain\",\n                \"lastName\": \"mohamd\",\n                \"fullName\": \"zain mohamd\",\n                \"id\": \"69e34adde5c1e0fd401cc7e3\"\n            },\n            \"createdAt\": \"2026-04-18T09:12:24.306Z\",\n            \"id\": \"69e34af8e5c1e0fd401cc7e5\"\n        },\n        {\n            \"status\": \"pending\",\n            \"_id\": \"69e344de2a7aeb375830534c\",\n            \"amount\": 50,\n            \"type\": \"withdraw\",\n            \"createdAt\": \"2026-04-18T08:46:22.928Z\",\n            \"id\": \"69e344de2a7aeb375830534c\"\n        },\n        {\n            \"status\": \"pending\",\n            \"_id\": \"69e3449f6abf4efdd8389006\",\n            \"amount\": 50,\n            \"type\": \"withdraw\",\n            \"createdAt\": \"2026-04-18T08:45:19.387Z\",\n            \"id\": \"69e3449f6abf4efdd8389006\"\n        },\n        {\n            \"status\": \"pending\",\n            \"_id\": \"69e343feb352837909cea029\",\n            \"amount\": 50,\n            \"type\": \"withdraw\",\n            \"createdAt\": \"2026-04-18T08:42:38.750Z\",\n            \"id\": \"69e343feb352837909cea029\"\n        },\n        {\n            \"status\": \"pending\",\n            \"_id\": \"69e3434e0901aae9bb43fd30\",\n            \"amount\": 500,\n            \"type\": \"deposit\",\n            \"createdAt\": \"2026-04-18T08:39:42.933Z\",\n            \"id\": \"69e3434e0901aae9bb43fd30\"\n        },\n        {\n            \"status\": \"pending\",\n            \"_id\": \"69e34313f5535939854f6b84\",\n            \"amount\": 100,\n            \"type\": \"deposit\",\n            \"createdAt\": \"2026-04-18T08:38:43.537Z\",\n            \"id\": \"69e34313f5535939854f6b84\"\n        },\n        {\n            \"status\": \"pending\",\n            \"_id\": \"69e341d3c4105bf7d10c1f29\",\n            \"amount\": 100,\n            \"type\": \"deposit\",\n            \"createdAt\": \"2026-04-18T08:33:23.166Z\",\n            \"id\": \"69e341d3c4105bf7d10c1f29\"\n        }\n    ],\n    \"balance\": 440\n}"
+						}
+					]
+				},
+				{
+					"name": "my",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZTM0MWEwYzQxMDViZjdkMTBjMWYyNyIsImVtYWlsIjoiemFpbkBnbWFpbC5jb20iLCJpYXQiOjE3NzY1MDE5MDgsImV4cCI6MTc3NjU4ODMwOCwianRpIjoiYjQwNWZmYTQtYzlmZC00Y2UyLWI0MGYtNmJhNWIxYjIyZmIxIn0.RQ6wfsz2f-F9gm1iPTdjG1Ax-f8b9JiaDwqaJkY-fss",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/transaction/my",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"transaction",
+								"my"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:3000/transaction/my",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "3000",
+									"path": [
+										"transaction",
+										"my"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "962"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3c2-/F9GipYiby5/oK90xhKtQXhZhO8\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 18 Apr 2026 09:43:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Transactions fetched successfully\",\n    \"data\": [\n        {\n            \"_id\": \"69e34b48e5c1e0fd401cc7e7\",\n            \"amount\": 10,\n            \"type\": \"transfer\",\n            \"userId\": \"69e341a0c4105bf7d10c1f27\",\n            \"inSystem\": \"inSystem\",\n            \"status\": \"completed\",\n            \"transferTo\": \"69e34adde5c1e0fd401cc7e3\",\n            \"createdAt\": \"2026-04-18T09:13:44.651Z\",\n            \"updatedAt\": \"2026-04-18T09:13:44.652Z\",\n            \"__v\": 0,\n            \"id\": \"69e34b48e5c1e0fd401cc7e7\"\n        },\n        {\n            \"_id\": \"69e34b41e5c1e0fd401cc7e6\",\n            \"amount\": 10,\n            \"type\": \"transfer\",\n            \"userId\": \"69e341a0c4105bf7d10c1f27\",\n            \"inSystem\": \"inSystem\",\n            \"status\": \"completed\",\n            \"transferTo\": \"69e34adde5c1e0fd401cc7e3\",\n            \"createdAt\": \"2026-04-18T09:13:37.183Z\",\n            \"updatedAt\": \"2026-04-18T09:13:37.184Z\",\n            \"__v\": 0,\n            \"id\": \"69e34b41e5c1e0fd401cc7e6\"\n        },\n        {\n            \"_id\": \"69e34af8e5c1e0fd401cc7e5\",\n            \"amount\": 30,\n            \"type\": \"transfer\",\n            \"userId\": \"69e341a0c4105bf7d10c1f27\",\n            \"inSystem\": \"inSystem\",\n            \"status\": \"completed\",\n            \"transferTo\": \"69e34adde5c1e0fd401cc7e3\",\n            \"createdAt\": \"2026-04-18T09:12:24.306Z\",\n            \"updatedAt\": \"2026-04-18T09:12:24.310Z\",\n            \"__v\": 0,\n            \"id\": \"69e34af8e5c1e0fd401cc7e5\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "find transaction",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZTM0MWEwYzQxMDViZjdkMTBjMWYyNyIsImVtYWlsIjoiemFpbkBnbWFpbC5jb20iLCJpYXQiOjE3NzY1MDE5MDgsImV4cCI6MTc3NjU4ODMwOCwianRpIjoiYjQwNWZmYTQtYzlmZC00Y2UyLWI0MGYtNmJhNWIxYjIyZmIxIn0.RQ6wfsz2f-F9gm1iPTdjG1Ax-f8b9JiaDwqaJkY-fss",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/transaction/69e34b48e5c1e0fd401cc7e7",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"transaction",
+								"69e34b48e5c1e0fd401cc7e7"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:3000/transaction/69e34b48e5c1e0fd401cc7e7",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "3000",
+									"path": [
+										"transaction",
+										"69e34b48e5c1e0fd401cc7e7"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "355"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"163-lBEf2iEt4mITtMglA4EPDV4fz7Q\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 18 Apr 2026 09:43:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Transaction fetched successfully\",\n    \"data\": {\n        \"_id\": \"69e34b48e5c1e0fd401cc7e7\",\n        \"amount\": 10,\n        \"type\": \"transfer\",\n        \"userId\": \"69e341a0c4105bf7d10c1f27\",\n        \"inSystem\": \"inSystem\",\n        \"status\": \"completed\",\n        \"transferTo\": \"69e34adde5c1e0fd401cc7e3\",\n        \"createdAt\": \"2026-04-18T09:13:44.651Z\",\n        \"updatedAt\": \"2026-04-18T09:13:44.652Z\",\n        \"__v\": 0,\n        \"id\": \"69e34b48e5c1e0fd401cc7e7\"\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

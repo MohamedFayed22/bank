@@ -1,0 +1,23 @@
+import type { Request, Response, NextFunction } from "express";
+import { ZodType } from "zod";
+import { AppError } from "../../utils/global-error-handler";
+
+type reqType = keyof Request;
+type schemaType = Partial<Record<reqType, ZodType>>;
+
+export const validation = (schema: schemaType) => {
+  return (req: Request, res: Response, next: NextFunction) => {
+    const validationError = [];
+    for (const key of Object.keys(schema) as reqType[]) {
+      if (!schema[key]) continue;
+      const result = schema[key].safeParse(req[key]);
+      if (!result.success) {
+        validationError.push(result.error.message);
+      }
+    }
+    if (validationError.length > 0) {
+      throw new AppError(JSON.parse(validationError as unknown as string), 400);
+    }
+    next();
+  };
+};
