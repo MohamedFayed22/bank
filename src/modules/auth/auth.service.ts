@@ -71,7 +71,7 @@ class AuthService {
 
     const user = await this._userModel.findOne({
       email,
-    });
+    }).select("-password");
 
     if (
       !user ||
@@ -106,7 +106,7 @@ class AuthService {
 
     const bankAccount = await this._bankAccountModel.findOne({
       userId: authReq.authUser._id,
-    });
+    }).select("-password");
 
     res.status(200).json({
       message: "Profile fetched successfully",
