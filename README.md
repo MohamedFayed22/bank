@@ -2,12 +2,6 @@
 
 Backend API مبنية بـ `Node.js` و`TypeScript` و`Express` و`MongoDB`.
 
-## Requirements
-
-- `Node.js` 18+ يفضل
-- `npm`
-- `MongoDB` شغال محليًا أو رابط MongoDB صالح
-
 ## Install
 
 ```bash
