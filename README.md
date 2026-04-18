@@ -24,8 +24,6 @@ SALT_ROUNDS=10
 SECRET_KEY=your_secret_key
 ```
 
-لو لم تضف القيم، المشروع لديه قيم افتراضية داخل [src/config/config.service.ts](/media/mohamed/52af8f1a-f97a-4dde-b07d-1e4c29c04528/learn/bank/src/config/config.service.ts).
-
 ## Run
 
 ### Development
